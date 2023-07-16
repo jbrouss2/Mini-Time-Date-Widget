@@ -1,5 +1,5 @@
-let dateContainer = document.querySelector(".date-continer");
-let clockContainer = document.querySelector(".clocker-container");
+let dateContainer = document.querySelector(".date-container");
+let clockContainer = document.querySelector(".clock-container");
 
 /*Array of all the week days*/
 const weekdays = [
@@ -37,5 +37,7 @@ const dateClock = setInterval(function dateTime(){
 
     minutes = minutes < 10 ? "0" + minutes : minutes;
 
-    dateContainer.innerHtml = `<p>${day}</p><p><span>${date}</span></p><p>${month}</p>`;
-})
+    dateContainer.innerHTML = `<p>${day}</p><p><span>${date}</span></p><p>${month}</p>`;
+
+    clockContainer.innerHTML = `${hours}:${minutes}`;
+}, 1000);
